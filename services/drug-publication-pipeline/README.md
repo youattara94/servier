@@ -30,7 +30,7 @@ This command will also create and enable a virtual environment for the project i
 
 5. Install dependencies
 ```bash
-poetry env use python3.12
+poetry install
 ```
 At the end of the installation, Poetry should display a message similar to:
 ```
@@ -49,13 +49,15 @@ The login/password for the Airflow UI will be saved into a file. THe file path w
 
 9. Refresh the Airflow UI. You should see the `drug_publication_pipeline` DAG in the list of available DAGs.
 
-10. To run the DAG, click on the toggle switch next to the DAG name in the Airflow UI. This will enable the DAG and allow it to run according to its schedule.  
+## Executing the DAG
+
+1. To run the DAG, click on the toggle switch next to the DAG name in the Airflow UI. This will enable the DAG and allow it to run according to its schedule.  
 ![capture-airflow.png](images/capture-airflow.png)
 
-11. Each of the 3 tasks in the DAG should run successfully and create a file `drug_publication_pipeline_output.json` in the `output` folder of the service directory. You can check the logs of each task in the Airflow UI to see their progress and results.
+2. Each of the 3 tasks should run successfully then, at the end of the DAG execution, create a file `drug_publication_pipeline_output.json` in the `output` folder of the service directory. You can check the logs of each task in the Airflow UI to see their progress and results.
 ![capture-airflow-2.png](images/capture-airflow-2.png)
 
-12. Overview of the output file:
+3. Overview of the output file:
 ![capture-fichier-output.png](images/capture-fichier-output.png)  
 
 Full content : 
